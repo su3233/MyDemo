@@ -27,7 +27,6 @@ public class RetrofitUtils {
                 .build();
         retrofitService = retrofit.create(RetrofitService.class);
 
-
     }
 
     public static OkHttpClient getOkHttpClient() {
