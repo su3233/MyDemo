@@ -1,0 +1,17 @@
+ext {
+    // Version of compile sdk
+    COMPILE_SDK_VERSION = 29
+    COMPILE_SDK_VERSION = 29
+    // Version of Android build tool
+    BUILD_TOOLS_VERSION = "29.0.3"
+    // Min version of Android sdk
+    MIN_SDK_VERSION = 23
+    // Version of target Android sdk
+    TARGET_SDK_VERSION = 29
+    TARGET_SDK_VERSION = 29
+    // Use progurad or not
+    MINIFY_ENABLED = true
+    MINIFY_DISABLED = false
+    JUNIT_VERSION= '4.12'
+
+}
