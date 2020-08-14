@@ -12,13 +12,11 @@ import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.aline.mydemo.activity.su.CommponentActivity;
-import com.aline.mydemo.activity.su.DemoActivity;
 import com.aline.mydemo.activity.su.FrameActivity;
 import com.aline.mydemo.activity.su.MoreActivity;
 import com.aline.mydemo.activity.su.PromoteActivity;
+import com.aline.mydemo.activity.test.MoocActivity;
 
 public class MainActivity extends TabActivity implements View.OnClickListener {
 
@@ -42,7 +40,7 @@ public class MainActivity extends TabActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main1);
+        setContentView(R.layout.activity_main);
         prepareAnim();
         prepareIntent();
         setupIntent();
@@ -169,7 +167,7 @@ public class MainActivity extends TabActivity implements View.OnClickListener {
     private void prepareIntent() {
         mFrameItent = new Intent(this, FrameActivity.class);
         mCommponentIntent = new Intent(this, CommponentActivity.class);
-        mDemoIntent = new Intent(this, DemoActivity.class);
+        mDemoIntent = new Intent(this, MoocActivity.class);
         mAccountIntent = new Intent(this, PromoteActivity.class);//PromoteActivity
         mMoreIntent = new Intent(this, MoreActivity.class);
     }

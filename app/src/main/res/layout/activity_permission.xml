@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/bt_permission_is"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="是否有授权申请权限" />
+
+    <Button
+        android:id="@+id/bt_permission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="申请电话权限" />
+
+    <Button
+        android:id="@+id/bt_rxpermission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rx申请权限" />
+
+    <Button
+        android:id="@+id/bt_rxpermission_mul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rx申请多个权限" />
+
+    <Button
+        android:id="@+id/bt_rxpermission_mul_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rx申请多个权限，详情" />
+
+</LinearLayout>

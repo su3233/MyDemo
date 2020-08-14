@@ -36,6 +36,9 @@ import org.xutils.x;
 
 import java.io.File;
 
+import cn.finalteam.okhttpfinal.OkHttpFinal;
+import cn.finalteam.okhttpfinal.OkHttpFinalConfiguration;
+
 public class MyApplication extends Application {
     public static MyApplication myApplication;
     public static UserDao userDao;
@@ -61,7 +64,7 @@ public class MyApplication extends Application {
         //GreenDao初始化
         String packageName = getPackageName();
         myApplication = this;
-//        CheckPermissionUtils.verifyStoragePermissions(myApplication);
+        //        CheckPermissionUtils.verifyStoragePermissions(myApplication);
         DaoMaster.DevOpenHelper devOpenHelper = new DaoMaster.DevOpenHelper(myApplication, "my-db", null);
         DaoMaster daoMaster = new DaoMaster(devOpenHelper.getWritableDatabase());
         DaoSession daoSession = daoMaster.newSession();
@@ -69,14 +72,17 @@ public class MyApplication extends Application {
 
         //imageLoader初始化
         initImageLoader(getApplicationContext());
-//Fresco初始化
+        //Fresco初始化
         Fresco.initialize(this);
 
-//xutils初始化
+        //xutils初始化
         x.Ext.init(this);
         x.Ext.setDebug(false); //输出debug日志，开启会影响性能
-
         xutilsDaoConfig();
+
+        //OkHttpFinal
+        OkHttpFinalConfiguration.Builder builder = new OkHttpFinalConfiguration.Builder();
+        OkHttpFinal.getInstance().init(builder.build());
     }
 
     /**

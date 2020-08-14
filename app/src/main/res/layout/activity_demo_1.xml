@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.aline.mydemo.utils.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/bt_onsaveinstance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="onSaveInstance保存数据" />
+
+            <Button
+                android:id="@+id/bt_read_assets_json"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="读取asset下的json并更新列表" />
+        </LinearLayout>
+
+    </com.aline.mydemo.utils.MyScrollView>
+
+</LinearLayout>
