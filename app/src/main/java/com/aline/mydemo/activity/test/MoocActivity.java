@@ -10,16 +10,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.aline.mydemo.R;
 
+import org.xutils.view.annotation.ContentView;
+import org.xutils.view.annotation.ViewInject;
+import org.xutils.x;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-
+@ContentView(R.layout.activity_mooc)
 public class MoocActivity extends AppCompatActivity {
 
-    @BindView(R.id.bt_async_load)
+    @ViewInject(R.id.bt_async_load)
     Button btAsyncLoad;
-    @BindView(R.id.bt_async_)
+    @ViewInject(R.id.bt_async_)
     Button btAsync;
     private Context mContext;
 
@@ -27,7 +31,7 @@ public class MoocActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mooc);
-        ButterKnife.bind(this);
+        x.view().inject(this);
         mContext = MoocActivity.this;
     }
 
