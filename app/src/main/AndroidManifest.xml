@@ -2,8 +2,27 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.aline.mydemo">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--获取设备网络状态，禁用后无法获取网络状态-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--网络权限，当禁用后，无法进行检索等相关业务-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--读取设备硬件信息，统计数据-->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <!--读取系统信息，包含系统版本等信息，用作统计-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--获取设备的网络状态，鉴权所需网络代理-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--允许sd卡写权限，需写入地图数据，禁用后无法显示地图-->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!--获取统计数据-->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!--鉴权所需该权限获取进程列表-->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+
     <application
-        android:name=".base.MyApp"
+        android:name=".base.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -17,6 +36,106 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="z0LYk7VyRD8iHMBoZdzWY1jG4ujsQfm8" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <service android:name=".service.MyService" />
+        <service
+            android:name=".service.TimerService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".broadcast.MyReceiverJing"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.broastcast.jing" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".service.BindService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.StartService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".activity.su.AlphaTitleBarActivity" />
+        <activity android:name=".activity.su.FrameActivity" />
+        <activity android:name=".activity.su.CommponentActivity" />
+        <activity android:name=".activity.su.PromoteActivity" />
+        <activity android:name=".activity.su.MoreActivity" />
+        <activity android:name=".activity.su.AlpaSplashActivity" />
+        <activity android:name=".activity.su.DataBaseActivity" />
+        <activity android:name=".activity.su.RollToGetGift" />
+        <activity android:name=".activity.su.BaiduMapActivity" />
+        <activity android:name=".activity.su.SurfaceViewActivity" />
+        <activity android:name=".activity.su.MulImageLoaderActivity" />
+        <activity android:name=".activity.su.OkhttpActivity" />
+        <activity android:name=".activity.su.MyDbActivity" />
+        <activity android:name=".activity.su.XutilsActivity" />
+        <activity android:name=".activity.su.TableLayoutActivity" />
+        <activity android:name=".activity.su.GridLayoutActivity" />
+        <activity android:name=".activity.su.CheckBoxActivity" />
+        <activity android:name=".activity.su.RadioButtonActivity" />
+        <activity android:name=".activity.su.ProgressBarActivity" />
+        <activity
+            android:name=".activity.su.BaseAppCompatActivity"
+            android:label="@string/title_activity_base_app_compat"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.su.ToggleButtonActivity" />
+        <activity android:name=".activity.su.AnalogClockActivity" />
+        <activity android:name=".activity.su.DatePickerActivity" />
+        <activity android:name=".activity.su.ChartsActivity" />
+        <activity android:name=".activity.su.WilliamChartActivity" />
+        <activity android:name=".activity.su.HelloChartsActivity" />
+        <activity android:name=".activity.su.MPAndroidChartActivity" />
+        <activity android:name=".activity.su.GlobalDialogActivity" />
+        <activity android:name=".activity.su.StickItemActivity" />
+        <activity android:name=".activity.su.TestActivity" />
+        <activity android:name=".activity.su.PromoteGoupActivity" />
+        <activity
+            android:name=".activity.su.BaseActivity"
+            android:label="@string/title_activity_base"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.su.ProMukeActivity" />
+        <activity android:name=".activity.su.ProLittleToExpert" />
+        <activity android:name=".activity.su.LittleTabViewpagerActivity" />
+
+        <!--/////////////////////////////////////////////////////////////////////-->
+
+        <activity android:name=".activity.test.AlertDialogActivity" />
+        <activity android:name=".activity.test.AnimatorActivity" />
+        <activity android:name=".activity.test.AsyncLoadActivity" />
+        <activity android:name=".activity.test.AsyncTaskActivity" />
+        <activity android:name=".activity.test.BindServceActivity" />
+        <activity android:name=".activity.test.DemoActivity" />
+        <activity android:name=".activity.test.DownProgressActivity" />
+        <activity android:name=".activity.test.MaterialMesignActivity" />
+        <activity android:name=".activity.test.MoocActivity" />
+        <activity android:name=".activity.test.MukeNotificationActivity" />
+        <activity android:name=".activity.test.MuPdfActivity" />
+        <activity android:name=".activity.test.NotificationActivity" />
+        <activity android:name=".activity.test.NotificationsActivity" />
+        <activity android:name=".activity.test.OnSaveInstanceActivity" />
+        <activity android:name=".activity.test.PermissionActivity" />
+        <activity android:name=".activity.test.PromoteActivity" />
+        <activity android:name=".activity.test.ReadAssetsJsonActivity" />
+        <activity android:name=".activity.test.StartServiceActivity" />
+        <activity android:name=".activity.test.TestEidtWatcherActivity" />
+        <activity android:name=".activity.test.ThreadUiActivity" />
+        <activity android:name=".activity.test.TimerActivity" />
+        <activity android:name=".activity.test.TimerServiceActivity" />
+
     </application>
 
 </manifest>
