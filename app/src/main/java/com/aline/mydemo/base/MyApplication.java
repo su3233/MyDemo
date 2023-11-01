@@ -76,9 +76,9 @@ public class MyApplication extends Application {
         Fresco.initialize(this);
 
         //xutils初始化
-        x.Ext.init(this);
-        x.Ext.setDebug(false); //输出debug日志，开启会影响性能
-        xutilsDaoConfig();
+//        x.Ext.init(this);
+//        x.Ext.setDebug(false); //输出debug日志，开启会影响性能
+//        xutilsDaoConfig();
 
         //OkHttpFinal
         OkHttpFinalConfiguration.Builder builder = new OkHttpFinalConfiguration.Builder();
